@@ -1,7 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:ui_2/custom/back_button.dart';
 
 class OrderScreen extends StatelessWidget {
@@ -13,16 +11,16 @@ class OrderScreen extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        CustomBackButton(text: "Order"),
-        SizedBox(
+        const CustomBackButton(text: "Order"),
+        const SizedBox(
           height: 30,
         ),
-        Text(
+        const Text(
           "       Delivery Details",
           style: TextStyle(
               color: Colors.black, fontSize: 18, fontWeight: FontWeight.bold),
         ),
-        SizedBox(
+        const SizedBox(
           height: 30,
         ),
         Expanded(child: CustomStepper(steps: steps))
@@ -49,6 +47,7 @@ class CustomStepper extends StatefulWidget {
   const CustomStepper({super.key, required this.steps});
 
   @override
+  // ignore: library_private_types_in_public_api
   _CustomStepperState createState() => _CustomStepperState();
 }
 
@@ -121,7 +120,7 @@ class _CustomStepperState extends State<CustomStepper> {
       height: height,
       alignment: Alignment.topCenter,
       child: Text(time,
-          style: TextStyle(
+          style: const TextStyle(
             fontWeight: FontWeight.bold,
             color: Colors.black,
           )),
@@ -199,7 +198,7 @@ class _CustomStepperState extends State<CustomStepper> {
         children: [
           Text(
             step.title,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.bold,
               color: Colors.black,

@@ -37,7 +37,7 @@ class CartScreen extends StatelessWidget {
             icon,
             color: const Color.fromARGB(255, 97, 97, 97),
           ),
-          SizedBox(
+          const SizedBox(
             width: 10,
           ),
           Text(
@@ -68,20 +68,20 @@ class CartScreen extends StatelessWidget {
           Text(
             text,
             style: k == true
-                ? TextStyle(
+                ? const TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
                   )
-                : TextStyle(),
+                : const TextStyle(),
           ),
           Text(
             text2,
             style: k == true
-                ? TextStyle(
+                ? const TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
                   )
-                : TextStyle(),
+                : const TextStyle(),
           ),
         ],
       ),

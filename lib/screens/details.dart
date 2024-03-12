@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:ui_2/custom/back_button.dart';
 
 class DetailScreen extends StatelessWidget {
@@ -12,8 +11,8 @@ class DetailScreen extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          CustomBackButton(text: "Details"),
-          Center(
+          const CustomBackButton(text: "Details"),
+          const Center(
             child: Image(
               image: AssetImage(
                 "assets/image-4.png",
@@ -21,10 +20,10 @@ class DetailScreen extends StatelessWidget {
               height: 250,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
-          Row(
+          const Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
@@ -43,18 +42,18 @@ class DetailScreen extends StatelessWidget {
               )
             ],
           ),
-          Text("Sush men"),
-          SizedBox(
+          const Text("Sush men"),
+          const SizedBox(
             height: 20,
           ),
-          Text(
+          const Text(
             "Description",
             style: TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.bold,
             ),
           ),
-          Text(
+          const Text(
             textAlign: TextAlign.left,
             "Recall that a continuous RV is one which has an uncountably infinite number of possible values. Typically the set of possible values for a continousRV will consist of one or more intervals on the real line.",
             style: TextStyle(
@@ -63,10 +62,10 @@ class DetailScreen extends StatelessWidget {
               wordSpacing: 1,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
-          Row(
+          const Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
@@ -85,7 +84,7 @@ class DetailScreen extends StatelessWidget {
               )
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Row(
@@ -101,7 +100,7 @@ class DetailScreen extends StatelessWidget {
               images(color: Colors.cyanAccent)
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Row(
@@ -147,7 +146,7 @@ class DetailScreen extends StatelessWidget {
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10)),
                     minimumSize: const Size(200, 50)),
-                child: Text(
+                child: const Text(
                   "Add to Cart",
                   style: TextStyle(color: Colors.white),
                 ),
@@ -161,14 +160,14 @@ class DetailScreen extends StatelessWidget {
 
   Widget images({required Color color}) {
     return Container(
+      decoration: BoxDecoration(
+        color: color,
+        borderRadius: BorderRadius.circular(16),
+      ),
       child: Image.asset(
         "assets/avatar.png",
         height: 50,
         colorBlendMode: BlendMode.colorBurn,
-      ),
-      decoration: BoxDecoration(
-        color: color,
-        borderRadius: BorderRadius.circular(16),
       ),
     );
   }
